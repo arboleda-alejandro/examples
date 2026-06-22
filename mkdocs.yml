@@ -1,0 +1,6 @@
+site_name: examples
+docs_dir: docs
+repo_url: https://github.com/arboleda-alejandro/examples
+edit_uri: blob/main/docs
+plugins:
+  - techdocs-core
