@@ -1,3 +1,22 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: gitops-platform
+  title: GitOps Platform
+  description: ArgoCD-based GitOps deployment platform for managing Kubernetes infrastructure with Helm charts, automated deployments, and supply chain security verification
+spec:
+  owner: user:default/arboleda-alejandro
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: developer-hub
+  title: Developer Hub
+  description: Developer resources, tools, and learning materials including Helm chart examples, tech talk presentations, and community management
+spec:
+  owner: user:default/arboleda-alejandro
+---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
@@ -5,8 +24,11 @@ metadata:
   annotations:
     github.com/project-slug: arboleda-alejandro/examples
     backstage.io/techdocs-ref: dir:.
+  description: Helm chart repository for example charts used in demonstrations and learning
 spec:
-  type: other
+  type: library
   lifecycle: experimental
   owner: user:default/arboleda-alejandro
-
+  system: developer-hub
+  dependsOn:
+    - component:argo-helm-alejo
