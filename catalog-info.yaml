@@ -32,3 +32,19 @@ spec:
   system: developer-hub
   dependsOn:
     - component:argo-helm-alejo
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: backstage
+  annotations:
+    github.com/project-slug: arboleda-alejandro/examples
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/kubernetes-id: backstage
+  description: Backstage developer portal - the internal developer platform powering this catalog
+spec:
+  type: service
+  lifecycle: experimental
+  owner: user:default/arboleda-alejandro
+  system: gitops-platform
+
