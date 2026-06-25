@@ -47,4 +47,18 @@ spec:
   lifecycle: experimental
   owner: user:default/arboleda-alejandro
   system: gitops-platform
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: demo
+  annotations:
+    backstage.io/kubernetes-id: demo
+    backstage.io/kubernetes-namespace: demo
+  description: Demo namespace with pods in various states to test the Kubernetes plugin visualization
+spec:
+  type: service
+  lifecycle: experimental
+  owner: user:default/arboleda-alejandro
+  system: developer-hub
 
